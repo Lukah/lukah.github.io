@@ -97,9 +97,9 @@ function clock(){
     var s = d.getSeconds();
 
     // Pad the minutes and seconds with leading zeros, if required
-    checkTime(s);
-    checkTime(m);
-    checkTime(h);
+    s = checkTime(s);
+    m = checkTime(m);
+    h = checkTime(h);
 
     // Compose the string for display
     var currentTime = h  + ":" + m + ":" + s;
