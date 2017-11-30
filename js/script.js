@@ -29,6 +29,7 @@ $(document).ready(function(){
     $("body").addClass("b" + rand);
     $("div#menu").addClass("a" + rand);
     $("div#clock").addClass("c" + rand);
+    $("div#date").addClass("c" + rand);
 });
 
 function initSearchBar() {
@@ -86,19 +87,30 @@ function handleQuery(event, query) {
 }
 
 function clock(){
-    var currentTime = new Date();
-    var currentHours = currentTime.getHours() + 1;
-    var currentMinutes = currentTime.getMinutes();
-    var currentSeconds = currentTime.getSeconds();
+    var d = new Date();
+
+    var days = ['Sun','Mon','Tue','Wednes','Thurs','Fri','Satur'];
+    var months = ['January','February','Mars','April','May','June','July','August','September','November','December'];
+
+    var h = d.getHours() + 1;
+    var m = d.getMinutes();
+    var s = d.getSeconds();
 
     // Pad the minutes and seconds with leading zeros, if required
-    currentSeconds = (currentSeconds < 10) ? "0" + currentSeconds : currentSeconds;
-    currentMinutes = (currentMinutes < 10) ? "0" + currentMinutes : currentMinutes;
-    currentHours = (currentHours < 10) ? "0" + currentHours : currentHours;
+    checkTime(s);
+    checkTime(m);
+    checkTime(h);
 
     // Compose the string for display
-    var currentTimeString = currentHours  + ":" + currentMinutes + ":" + currentSeconds;
+    var currentTime = h  + ":" + m + ":" + s;
+    var currentDay = days[d.getDay()] + "day " + d.getDate() + " " + months[d.getMonth()];
     
-    $("#clock").html(currentTimeString);
+    $("#date").html(currentDay);
+    $("#clock").html(currentTime);
     setTimeout(clock, 1000);
+}
+
+function checkTime(i){
+    i = (i < 10) ? "0" + i : i;
+    return i;
 }

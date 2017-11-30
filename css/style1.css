@@ -14,3 +14,4 @@ div#menu a{display: block;padding: 20px;z-index: 2;}
 #search{height: 30px;width: 649px;margin-bottom: 10px;border: none;outline: none;text-align: left;background-color: white;color: #333;font-size: 15px;display: block; text-align: center}
 ::-moz-placeholder {font-weight: bold;color: #ccc;font-size: 20px;}
 div#clock{position: absolute;color: black;font-size: 90px;right: 10px;opacity: 0.3;}
+div#date{position: absolute;color: black;font-size: 20px;right: 15px;top:100px;opacity: 0.3;}
