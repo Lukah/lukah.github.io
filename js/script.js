@@ -103,7 +103,7 @@ function clock(){
 
     // Compose the string for display
     var currentTime = h  + ":" + m + ":" + s;
-    var currentDay = days[d.getDay()] + "day " + d.getDate() + " " + months[d.getMonth()];
+    var currentDay = days[d.getDay()] + "day, " + months[d.getMonth()]  + " " + d.getDate();
     
     $("#date").html(currentDay);
     $("#clock").html(currentTime);
