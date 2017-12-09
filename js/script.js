@@ -23,8 +23,10 @@ $(document).ready(function(){
     });
 
     var rand = Math.floor((Math.random() * 20) + 1);
-    var randBg = rand + ".jpg";
-    $("div#picture").css("background-image", "url(src/b/" + randBg + ")");
+    var randImg = rand + ".jpg";
+    var randBg = Math.floor((Math.random() * 12) + 1);
+    $("div#picture").css("background-image", "url(src/b/" + randImg + ")");
+    $("body").css("background-image", "url(src/w/" + randBg + ".jpg)");
     $("table").addClass("a" + rand);
     $("body").addClass("b" + rand);
     $("div#menu").addClass("a" + rand);
