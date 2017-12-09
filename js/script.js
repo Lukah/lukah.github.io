@@ -90,7 +90,7 @@ function clock(){
     var d = new Date();
 
     var days = ['Sun','Mon','Tue','Wednes','Thurs','Fri','Satur'];
-    var months = ['January','February','Mars','April','May','June','July','August','September','November','December'];
+    var months = ['January','February','Mars','April','May','June','July','August','September','October','November','December'];
 
     var h = d.getHours() + 1;
     var m = d.getMinutes();
